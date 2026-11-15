@@ -1,0 +1,247 @@
+{
+  "sport": "afl",
+  "name": "AFL",
+  "prefix": "afl",
+  "emoji": "🏉",
+  "group": "afl",
+  "season_start_month": 3,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": null,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "disposals": {
+      "label": "Disposals",
+      "formula": [
+        "disposals"
+      ],
+      "dist": "normal",
+      "sd_floor": 3.5,
+      "board": true
+    },
+    "goals": {
+      "label": "Goals",
+      "formula": [
+        "goals"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.4,
+      "board": true
+    },
+    "marks": {
+      "label": "Marks",
+      "formula": [
+        "marks"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.6,
+      "board": true
+    },
+    "tackles": {
+      "label": "Tackles",
+      "formula": [
+        "tackles"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.3,
+      "board": true
+    },
+    "kicks": {
+      "label": "Kicks",
+      "formula": [
+        "kicks"
+      ],
+      "dist": "normal",
+      "sd_floor": 2.5,
+      "board": true
+    },
+    "handballs": {
+      "label": "Handballs",
+      "formula": [
+        "handballs"
+      ],
+      "dist": "normal",
+      "sd_floor": 2.5,
+      "board": true
+    },
+    "fantasy": {
+      "label": "Fantasy Score",
+      "formula": [
+        "fantasy_raw"
+      ],
+      "dist": "normal",
+      "sd_floor": 10,
+      "board": false
+    }
+  },
+  "stats_by_pp_name": {
+    "disposals": "disposals",
+    "goals": "goals",
+    "marks": "marks",
+    "tackles": "tackles",
+    "kicks": "kicks",
+    "handballs": "handballs",
+    "fantasy score": "fantasy"
+  },
+  "prizepicks": {
+    "leagues": {
+      "165": "AFL"
+    }
+  },
+  "espn": {
+    "paths": [
+      "australian-football/afl"
+    ],
+    "keys": {
+      "disposals": [
+        "*",
+        "D"
+      ],
+      "goals": [
+        "*",
+        "G"
+      ],
+      "marks": [
+        "*",
+        "M"
+      ],
+      "tackles": [
+        "*",
+        "T"
+      ],
+      "kicks": [
+        "*",
+        "K"
+      ],
+      "handballs": [
+        "*",
+        "H"
+      ],
+      "inside50": [
+        "*",
+        "I50"
+      ]
+    },
+    "injuries": true
+  },
+  "sgo": {
+    "leagues": [],
+    "stat_map": {}
+  },
+  "odds_api": {
+    "sport_keys": [
+      "aussierules_afl"
+    ],
+    "markets": [
+      "player_disposals",
+      "player_marks",
+      "player_tackles"
+    ],
+    "regions": "au",
+    "min_left": 30,
+    "hours_ahead": 36,
+    "stat_by_market": {
+      "player_disposals": "disposals",
+      "player_marks": "marks",
+      "player_tackles": "tackles"
+    }
+  },
+  "schedule": {
+    "morning": "00:00",
+    "board_open": "01:00",
+    "window": [
+      "00:00",
+      "23:59"
+    ],
+    "pp_every_min": 180,
+    "results_from": "06:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex AFL 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form",
+      "season base",
+      "opponent allowed",
+      "home / away split",
+      "PrizePicks standard line anchor"
+    ],
+    "pending": [
+      "inside 50s",
+      "time on ground",
+      "history (none on the Mac: the engine starts once the collector has saved games)"
+    ]
+  },
+  "team_alias": {}
+}

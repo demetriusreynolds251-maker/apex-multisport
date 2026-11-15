@@ -1,0 +1,565 @@
+{
+  "sport": "ncaaf",
+  "name": "College Football",
+  "prefix": "cfb",
+  "emoji": "🏈",
+  "group": "football",
+  "season_start_month": 8,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": null,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "bestless": {
+      "title": "BEST GOBLIN LESS",
+      "size": 5,
+      "note": "LESS only, a full step or more above the sportsbooks, 80+, Apex 75+ on LESS",
+      "kind": "goblin",
+      "side": "LESS",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "pass_yds": {
+      "label": "Pass Yards",
+      "formula": [
+        "passing_yards"
+      ],
+      "dist": "normal",
+      "sd_floor": 30,
+      "board": true
+    },
+    "pass_tds": {
+      "label": "Pass TDs",
+      "formula": [
+        "passing_tds"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": true
+    },
+    "completions": {
+      "label": "Pass Completions",
+      "formula": [
+        "completions"
+      ],
+      "dist": "normal",
+      "sd_floor": 3,
+      "board": true
+    },
+    "pass_att": {
+      "label": "Pass Attempts",
+      "formula": [
+        "pass_attempts"
+      ],
+      "dist": "normal",
+      "sd_floor": 4,
+      "board": true
+    },
+    "ints": {
+      "label": "Interceptions",
+      "formula": [
+        "interceptions_thrown"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "rush_yds": {
+      "label": "Rush Yards",
+      "formula": [
+        "rushing_yards"
+      ],
+      "dist": "normal",
+      "sd_floor": 12,
+      "board": true
+    },
+    "rush_att": {
+      "label": "Rush Attempts",
+      "formula": [
+        "rushing_attempts"
+      ],
+      "dist": "normal",
+      "sd_floor": 2.5,
+      "board": true
+    },
+    "rec_yds": {
+      "label": "Receiving Yards",
+      "formula": [
+        "receiving_yards"
+      ],
+      "dist": "normal",
+      "sd_floor": 12,
+      "board": true
+    },
+    "receptions": {
+      "label": "Receptions",
+      "formula": [
+        "receptions"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.3,
+      "board": true
+    },
+    "targets": {
+      "label": "Targets",
+      "formula": [
+        "targets"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.5,
+      "board": false
+    },
+    "rush_rec_yds": {
+      "label": "Rush+Rec Yards",
+      "formula": [
+        "rushing_yards",
+        "receiving_yards"
+      ],
+      "dist": "normal",
+      "sd_floor": 14,
+      "board": true,
+      "alt": "rush_rec_yds_raw"
+    },
+    "pass_rush_yds": {
+      "label": "Pass+Rush Yards",
+      "formula": [
+        "passing_yards",
+        "rushing_yards"
+      ],
+      "dist": "normal",
+      "sd_floor": 32,
+      "board": true,
+      "alt": "pass_rush_yds_raw"
+    },
+    "long_rec": {
+      "label": "Longest Reception",
+      "formula": [
+        "long_reception"
+      ],
+      "dist": "normal",
+      "sd_floor": 6,
+      "board": true
+    },
+    "long_rush": {
+      "label": "Longest Rush",
+      "formula": [
+        "long_rush"
+      ],
+      "dist": "normal",
+      "sd_floor": 5,
+      "board": true
+    },
+    "anytime_td": {
+      "label": "Rush+Rec TDs",
+      "formula": [
+        "rushing_tds",
+        "receiving_tds"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true,
+      "alt": "touchdowns_raw"
+    },
+    "rec_tds": {
+      "label": "Receiving TDs",
+      "formula": [
+        "receiving_tds"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "rush_tds": {
+      "label": "Rushing TDs",
+      "formula": [
+        "rushing_tds"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "tackles_ast": {
+      "label": "Tackles+Assists",
+      "formula": [
+        "tackles"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.8,
+      "board": true
+    },
+    "sacks": {
+      "label": "Sacks",
+      "formula": [
+        "sacks"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "fg_made": {
+      "label": "FG Made",
+      "formula": [
+        "fg_made"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": false
+    },
+    "kicking_pts": {
+      "label": "Kicking Points",
+      "formula": [
+        "kicking_points"
+      ],
+      "dist": "normal",
+      "sd_floor": 2.5,
+      "board": false
+    },
+    "fantasy": {
+      "label": "Fantasy Score",
+      "formula": [
+        [
+          "passing_yards",
+          0.04
+        ],
+        [
+          "passing_tds",
+          4
+        ],
+        [
+          "interceptions_thrown",
+          -1
+        ],
+        [
+          "rushing_yards",
+          0.1
+        ],
+        [
+          "rushing_tds",
+          6
+        ],
+        [
+          "receiving_yards",
+          0.1
+        ],
+        [
+          "receiving_tds",
+          6
+        ],
+        [
+          "receptions",
+          1
+        ]
+      ],
+      "dist": "normal",
+      "sd_floor": 4,
+      "board": false,
+      "alt": "fantasy_raw"
+    }
+  },
+  "stats_by_pp_name": {
+    "pass yards": "pass_yds",
+    "pass tds": "pass_tds",
+    "pass comp": "completions",
+    "pass completions": "completions",
+    "pass attempts": "pass_att",
+    "int": "ints",
+    "interceptions": "ints",
+    "rush yards": "rush_yds",
+    "rush atts": "rush_att",
+    "rush attempts": "rush_att",
+    "rec yards": "rec_yds",
+    "receiving yards": "rec_yds",
+    "recs": "receptions",
+    "receptions": "receptions",
+    "rec targets": "targets",
+    "targets": "targets",
+    "rush+rec yds": "rush_rec_yds",
+    "rush+rec yards": "rush_rec_yds",
+    "pass+rush yds": "pass_rush_yds",
+    "pass+rush yards": "pass_rush_yds",
+    "longest rec": "long_rec",
+    "longest reception": "long_rec",
+    "longest rush": "long_rush",
+    "anytime tds": "anytime_td",
+    "rush+rec tds": "anytime_td",
+    "rec tds": "rec_tds",
+    "rush tds": "rush_tds",
+    "tackles+ast": "tackles_ast",
+    "tackles + ast": "tackles_ast",
+    "sacks": "sacks",
+    "fg made": "fg_made",
+    "kicking points": "kicking_pts",
+    "fantasy score": "fantasy"
+  },
+  "prizepicks": {
+    "leagues": {
+      "15": "CFB"
+    }
+  },
+  "espn": {
+    "paths": [
+      "football/college-football"
+    ],
+    "keys": {
+      "passing_yards": [
+        "passing",
+        "passingYards"
+      ],
+      "passing_tds": [
+        "passing",
+        "passingTouchdowns"
+      ],
+      "completions": [
+        "passing",
+        "completions/passingAttempts#1"
+      ],
+      "pass_attempts": [
+        "passing",
+        "completions/passingAttempts#2"
+      ],
+      "interceptions_thrown": [
+        "passing",
+        "interceptions"
+      ],
+      "rushing_yards": [
+        "rushing",
+        "rushingYards"
+      ],
+      "rushing_attempts": [
+        "rushing",
+        "rushingAttempts"
+      ],
+      "rushing_tds": [
+        "rushing",
+        "rushingTouchdowns"
+      ],
+      "long_rush": [
+        "rushing",
+        "longRushing"
+      ],
+      "receptions": [
+        "receiving",
+        "receptions"
+      ],
+      "receiving_yards": [
+        "receiving",
+        "receivingYards"
+      ],
+      "receiving_tds": [
+        "receiving",
+        "receivingTouchdowns"
+      ],
+      "long_reception": [
+        "receiving",
+        "longReception"
+      ],
+      "targets": [
+        "receiving",
+        "receivingTargets"
+      ],
+      "tackles": [
+        "defensive",
+        "totalTackles"
+      ],
+      "sacks": [
+        "defensive",
+        "sacks"
+      ],
+      "fg_made": [
+        "kicking",
+        "fieldGoalsMade/fieldGoalAttempts#1"
+      ],
+      "kicking_points": [
+        "kicking",
+        "totalKickingPoints"
+      ]
+    },
+    "injuries": false
+  },
+  "sgo": {
+    "leagues": [
+      "NCAAF"
+    ],
+    "stat_map": {
+      "passing_yards": "passing_yards",
+      "passing_touchdowns": "passing_tds",
+      "passing_completions": "completions",
+      "passing_attempts": "pass_attempts",
+      "passing_interceptions": "interceptions_thrown",
+      "rushing_yards": "rushing_yards",
+      "rushing_attempts": "rushing_attempts",
+      "rushing_touchdowns": "rushing_tds",
+      "rushing_longestRush": "long_rush",
+      "receiving_receptions": "receptions",
+      "receiving_yards": "receiving_yards",
+      "receiving_touchdowns": "receiving_tds",
+      "receiving_longestReception": "long_reception",
+      "receiving_targets": "targets",
+      "defense_combinedTackles": "tackles",
+      "defense_sacks": "sacks",
+      "fieldGoals_made": "fg_made",
+      "kicking_totalPoints": "kicking_points",
+      "rushing+receiving_yards": "rush_rec_yds_raw",
+      "passing+rushing_yards": "pass_rush_yds_raw",
+      "touchdowns": "touchdowns_raw",
+      "fantasyScore": "fantasy_raw"
+    }
+  },
+  "odds_api": {
+    "sport_keys": [
+      "americanfootball_ncaaf"
+    ],
+    "markets": [
+      "player_pass_yds",
+      "player_pass_tds",
+      "player_pass_completions",
+      "player_pass_attempts",
+      "player_rush_yds",
+      "player_rush_attempts",
+      "player_receptions",
+      "player_reception_yds",
+      "player_rush_reception_yds",
+      "player_tackles_assists"
+    ],
+    "regions": "us",
+    "min_left": 30,
+    "hours_ahead": 96,
+    "stat_by_market": {
+      "player_pass_yds": "pass_yds",
+      "player_pass_tds": "pass_tds",
+      "player_pass_completions": "completions",
+      "player_pass_attempts": "pass_att",
+      "player_rush_yds": "rush_yds",
+      "player_rush_attempts": "rush_att",
+      "player_receptions": "receptions",
+      "player_reception_yds": "rec_yds",
+      "player_rush_reception_yds": "rush_rec_yds",
+      "player_tackles_assists": "tackles_ast"
+    },
+    "source": "sgo",
+    "sgo_leagues": [
+      "NCAAF"
+    ],
+    "sgo_stat": {
+      "passing_yards": "pass_yds",
+      "passing_touchdowns": "pass_tds",
+      "passing_completions": "completions",
+      "passing_attempts": "pass_att",
+      "passing_interceptions": "ints",
+      "rushing_yards": "rush_yds",
+      "rushing_attempts": "rush_att",
+      "receiving_yards": "rec_yds",
+      "receiving_receptions": "receptions",
+      "receiving_targets": "targets",
+      "rushing+receiving_yards": "rush_rec_yds",
+      "passing+rushing_yards": "pass_rush_yds",
+      "receiving_longestReception": "long_rec",
+      "rushing_longestRush": "long_rush",
+      "defense_combinedTackles": "tackles_ast",
+      "defense_sacks": "sacks",
+      "fieldGoals_made": "fg_made",
+      "kicking_totalPoints": "kicking_pts"
+    }
+  },
+  "schedule": {
+    "morning": "08:00",
+    "board_open": "09:00",
+    "window": [
+      "08:00",
+      "23:30"
+    ],
+    "pp_every_min": 180,
+    "results_from": "15:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex College Football 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form (last 5 / 10)",
+      "season base",
+      "opponent defense allowed (last 12)",
+      "home / away split",
+      "game script from the ESPN spread and total",
+      "PrizePicks standard line anchor"
+    ],
+    "pending": [
+      "snap share",
+      "target share",
+      "red zone usage",
+      "weather",
+      "injury feed (ESPN has none for college)"
+    ]
+  },
+  "team_alias": {},
+  "books_display_only": true
+}

@@ -1,0 +1,353 @@
+{
+  "sport": "nhl",
+  "name": "NHL",
+  "prefix": "nhl",
+  "emoji": "🏒",
+  "group": "hockey",
+  "season_start_month": 9,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": 0.97,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "bestless": {
+      "title": "BEST GOBLIN LESS",
+      "size": 5,
+      "note": "LESS only, a full step or more above the sportsbooks, 80+, Apex 75+ on LESS",
+      "kind": "goblin",
+      "side": "LESS",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "sog": {
+      "label": "Shots On Goal",
+      "formula": [
+        "shots"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.2,
+      "board": true
+    },
+    "goals": {
+      "label": "Goals",
+      "formula": [
+        "goals"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.4,
+      "board": true
+    },
+    "assists": {
+      "label": "Assists",
+      "formula": [
+        "assists"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true
+    },
+    "points": {
+      "label": "Points",
+      "formula": [
+        "goals",
+        "assists"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": true,
+      "alt": "points_raw"
+    },
+    "saves": {
+      "label": "Goalie Saves",
+      "formula": [
+        "saves"
+      ],
+      "dist": "normal",
+      "sd_floor": 4,
+      "board": true
+    },
+    "blocked": {
+      "label": "Blocked Shots",
+      "formula": [
+        "blocked"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": true
+    },
+    "hits": {
+      "label": "Hits",
+      "formula": [
+        "hits"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.7,
+      "board": true
+    },
+    "goals_against": {
+      "label": "Goals Against",
+      "formula": [
+        "goals_against"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.7,
+      "board": false
+    },
+    "faceoffs_won": {
+      "label": "Faceoffs Won",
+      "formula": [
+        "faceoffs_won"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.5,
+      "board": false
+    },
+    "pp_points": {
+      "label": "Power Play Points",
+      "formula": [
+        "pp_points_raw"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.4,
+      "board": false
+    },
+    "toi": {
+      "label": "Time On Ice",
+      "formula": [
+        "toi"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.5,
+      "board": false
+    }
+  },
+  "stats_by_pp_name": {
+    "shots on goal": "sog",
+    "shots": "sog",
+    "goals": "goals",
+    "assists": "assists",
+    "points": "points",
+    "goalie saves": "saves",
+    "saves": "saves",
+    "blocked shots": "blocked",
+    "hits": "hits",
+    "goals against": "goals_against",
+    "faceoffs won": "faceoffs_won",
+    "power play points": "pp_points",
+    "time on ice": "toi",
+    "sog": "sog",
+    "goals allowed": "goals_against",
+    "minutes": "toi"
+  },
+  "prizepicks": {
+    "leagues": {
+      "8": "NHL"
+    }
+  },
+  "espn": {
+    "paths": [
+      "hockey/nhl"
+    ],
+    "keys": {
+      "shots": [
+        "*",
+        "shotsTotal"
+      ],
+      "goals": [
+        "*",
+        "goals"
+      ],
+      "assists": [
+        "*",
+        "assists"
+      ],
+      "blocked": [
+        "*",
+        "blockedShots"
+      ],
+      "hits": [
+        "*",
+        "hits"
+      ],
+      "faceoffs_won": [
+        "*",
+        "faceoffsWon"
+      ],
+      "toi": [
+        "*",
+        "timeOnIce",
+        "minutes"
+      ],
+      "saves": [
+        "goalies",
+        "saves"
+      ],
+      "goals_against": [
+        "goalies",
+        "goalsAgainst"
+      ]
+    },
+    "injuries": true
+  },
+  "sgo": {
+    "leagues": [
+      "NHL"
+    ],
+    "stat_map": {
+      "shots_onGoal": "shots",
+      "goals": "goals",
+      "assists": "assists",
+      "points": "points_raw",
+      "goals+assists": "points_raw",
+      "blocks": "blocked",
+      "hits": "hits",
+      "goalie_saves": "saves",
+      "goalie_goalsAgainst": "goals_against",
+      "faceoffs_won": "faceoffs_won",
+      "powerPlay_goals+assists": "pp_points_raw",
+      "timeOnIce": "toi"
+    }
+  },
+  "odds_api": {
+    "sport_keys": [
+      "icehockey_nhl"
+    ],
+    "markets": [
+      "player_shots_on_goal",
+      "player_goals",
+      "player_assists",
+      "player_points",
+      "player_total_saves",
+      "player_blocked_shots"
+    ],
+    "regions": "us",
+    "min_left": 30,
+    "hours_ahead": 30,
+    "stat_by_market": {
+      "player_shots_on_goal": "sog",
+      "player_goals": "goals",
+      "player_assists": "assists",
+      "player_points": "points",
+      "player_total_saves": "saves",
+      "player_blocked_shots": "blocked"
+    },
+    "source": "sgo",
+    "sgo_leagues": [
+      "NHL"
+    ],
+    "sgo_stat": {
+      "shots_onGoal": "sog",
+      "points": "goals",
+      "goals+assists": "points",
+      "assists": "assists",
+      "goalie_saves": "saves",
+      "blocks": "blocked",
+      "hits": "hits",
+      "goalie_goalsAgainst": "goals_against",
+      "faceOffs_won": "faceoffs_won",
+      "powerPlay_goals+assists": "pp_points"
+    }
+  },
+  "schedule": {
+    "morning": "08:00",
+    "board_open": "10:00",
+    "window": [
+      "08:00",
+      "23:30"
+    ],
+    "pp_every_min": 180,
+    "results_from": "21:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex NHL 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form (last 5 / 10)",
+      "season base",
+      "opponent allowed (last 12)",
+      "home / away split",
+      "back-to-back",
+      "goalie starter check (saves only for a goalie who started most of the last 10)",
+      "injury list",
+      "PrizePicks standard line anchor",
+      "book lines when a key exists"
+    ],
+    "pending": [
+      "ice time trend (ESPN gives time on ice, wired next)",
+      "power play usage",
+      "goalie matchup (opponent save %)"
+    ]
+  },
+  "team_alias": {},
+  "books_display_only": true
+}

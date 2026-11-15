@@ -1,0 +1,10 @@
+secrets/*
+!secrets/.gitkeep
+database/history.db*
+database/snapshots/
+logs/*
+!logs/.gitkeep
+cache/
+exports/
+__pycache__/
+*.pyc

@@ -1,0 +1,159 @@
+{
+ "trained_before": "2025-11-10",
+ "shrink_to": 0.52,
+ "shrink_n": 5,
+ "buckets": {
+  "same|p<55|less": {
+   "won": 832,
+   "n": 1553
+  },
+  "same|p<55|more": {
+   "won": 826,
+   "n": 1692
+  },
+  "same|p60-70|less": {
+   "won": 272,
+   "n": 491
+  },
+  "same|p55-60|less": {
+   "won": 504,
+   "n": 941
+  },
+  "room1|p55-60|more": {
+   "won": 114,
+   "n": 206
+  },
+  "room1|p60-70|less": {
+   "won": 95,
+   "n": 177
+  },
+  "room1|p55-60|less": {
+   "won": 114,
+   "n": 174
+  },
+  "against|p<55|more": {
+   "won": 49,
+   "n": 117
+  },
+  "same|p55-60|more": {
+   "won": 379,
+   "n": 766
+  },
+  "room1|p<55|more": {
+   "won": 82,
+   "n": 150
+  },
+  "against|p<55|less": {
+   "won": 49,
+   "n": 92
+  },
+  "room2+|p60-70|less": {
+   "won": 16,
+   "n": 31
+  },
+  "room0.5|p<55|more": {
+   "won": 28,
+   "n": 44
+  },
+  "room0.5|p55-60|more": {
+   "won": 28,
+   "n": 57
+  },
+  "room1|p70+|more": {
+   "won": 19,
+   "n": 37
+  },
+  "room1|p60-70|more": {
+   "won": 121,
+   "n": 215
+  },
+  "against|p55-60|less": {
+   "won": 12,
+   "n": 21
+  },
+  "room1|p<55|less": {
+   "won": 112,
+   "n": 190
+  },
+  "same|p60-70|more": {
+   "won": 111,
+   "n": 209
+  },
+  "room0.5|p60-70|more": {
+   "won": 14,
+   "n": 35
+  },
+  "room0.5|p<55|less": {
+   "won": 33,
+   "n": 58
+  },
+  "room2+|p70+|less": {
+   "won": 11,
+   "n": 18
+  },
+  "against|p55-60|more": {
+   "won": 14,
+   "n": 21
+  },
+  "room0.5|p70+|more": {
+   "won": 2,
+   "n": 3
+  },
+  "room2+|p60-70|more": {
+   "won": 18,
+   "n": 34
+  },
+  "room0.5|p55-60|less": {
+   "won": 21,
+   "n": 37
+  },
+  "room2+|p70+|more": {
+   "won": 11,
+   "n": 14
+  },
+  "room1|p70+|less": {
+   "won": 47,
+   "n": 88
+  },
+  "room2+|p55-60|less": {
+   "won": 11,
+   "n": 14
+  },
+  "room2+|p55-60|more": {
+   "won": 14,
+   "n": 19
+  },
+  "room0.5|p60-70|less": {
+   "won": 16,
+   "n": 30
+  },
+  "room2+|p<55|more": {
+   "won": 5,
+   "n": 7
+  },
+  "against|p60-70|less": {
+   "won": 3,
+   "n": 7
+  },
+  "same|p70+|less": {
+   "won": 23,
+   "n": 32
+  },
+  "against|p60-70|more": {
+   "won": 5,
+   "n": 7
+  },
+  "same|p70+|more": {
+   "won": 3,
+   "n": 8
+  },
+  "room2+|p<55|less": {
+   "won": 3,
+   "n": 5
+  },
+  "room0.5|p70+|less": {
+   "won": 3,
+   "n": 5
+  }
+ }
+}

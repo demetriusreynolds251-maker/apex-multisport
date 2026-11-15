@@ -1,0 +1,8 @@
+{
+  "product": "Apex Basketball System",
+  "leagues": {"7": "NBA"},
+  "collector": {"pull_every_min": 30, "hours_ct": ["08:00", "23:59"], "call_gap_sec": 60, "backoff_on_429_sec": 21600},
+  "boards_to_test": ["top3", "top5", "top6", "top10", "best_goblin", "best_standard", "best_demon"],
+  "testing": {"split": "older half builds, newer half checks", "pass_rule": "wins picks and loses no days in either half"},
+  "discord": {"channels_prefix": "bball-", "mission_control": false}
+}

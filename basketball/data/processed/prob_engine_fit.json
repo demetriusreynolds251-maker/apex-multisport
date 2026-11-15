@@ -1,0 +1,37 @@
+{
+ "sd_k": {
+  "points": 1.2,
+  "rebounds": 1.0,
+  "assists": 1.0,
+  "points+rebounds+assists": 1.0,
+  "points+rebounds": 1.2,
+  "points+assists": 1.0,
+  "rebounds+assists": 1.0,
+  "threePointersMade": 1.0,
+  "steals": 1.0,
+  "blocks": 1.0,
+  "turnovers": 1.0,
+  "blocks+steals": 1.0,
+  "fantasyScore": 1.0
+ },
+ "anchor": {
+  "points": 0.9,
+  "rebounds": 0.7,
+  "assists": 0.9,
+  "points+rebounds+assists": 0.8,
+  "points+rebounds": 0.9,
+  "points+assists": 0.8,
+  "rebounds+assists": 0.9,
+  "threePointersMade": 0.0,
+  "steals": 0.0,
+  "blocks": 0.0,
+  "turnovers": 0.0,
+  "blocks+steals": 0.0,
+  "fantasyScore": 0.9
+ },
+ "market_weight": 0.5,
+ "fit_on": "before 2025-05-15",
+ "fitted": "2026-11-05T13:58:08.112338-06:00",
+ "props": 10262,
+ "mode": "pre"
+}

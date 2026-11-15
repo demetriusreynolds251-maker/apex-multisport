@@ -1,0 +1,253 @@
+{
+  "sport": "rugby",
+  "name": "Rugby League",
+  "prefix": "rugby",
+  "emoji": "🏉",
+  "group": "rugby",
+  "season_start_month": 3,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": null,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "tries": {
+      "label": "Tries",
+      "formula": [
+        "tries"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": true
+    },
+    "points": {
+      "label": "Points",
+      "formula": [
+        "points"
+      ],
+      "dist": "normal",
+      "sd_floor": 2,
+      "board": true
+    },
+    "run_metres": {
+      "label": "Run Metres",
+      "formula": [
+        "metres"
+      ],
+      "dist": "normal",
+      "sd_floor": 18,
+      "board": true
+    },
+    "tackles": {
+      "label": "Tackles",
+      "formula": [
+        "tackles"
+      ],
+      "dist": "normal",
+      "sd_floor": 4,
+      "board": true
+    },
+    "line_breaks": {
+      "label": "Line Breaks",
+      "formula": [
+        "line_breaks"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": true
+    },
+    "try_assists": {
+      "label": "Try Assists",
+      "formula": [
+        "try_assists"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": true
+    },
+    "offloads": {
+      "label": "Offloads",
+      "formula": [
+        "offloads"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.4,
+      "board": true
+    },
+    "runs": {
+      "label": "Runs",
+      "formula": [
+        "runs"
+      ],
+      "dist": "normal",
+      "sd_floor": 2,
+      "board": false
+    }
+  },
+  "stats_by_pp_name": {
+    "tries": "tries",
+    "points": "points",
+    "run metres": "run_metres",
+    "run meters": "run_metres",
+    "metres": "run_metres",
+    "tackles": "tackles",
+    "line breaks": "line_breaks",
+    "try assists": "try_assists",
+    "offloads": "offloads",
+    "runs": "runs"
+  },
+  "prizepicks": {
+    "leagues": {}
+  },
+  "espn": {
+    "paths": [
+      "rugby-league/3"
+    ],
+    "keys": {
+      "tries": [
+        "roster",
+        "tries"
+      ],
+      "points": [
+        "roster",
+        "points"
+      ],
+      "metres": [
+        "roster",
+        "metres"
+      ],
+      "tackles": [
+        "roster",
+        "tackles"
+      ],
+      "line_breaks": [
+        "roster",
+        "cleanBreaks"
+      ],
+      "try_assists": [
+        "roster",
+        "tryAssists"
+      ],
+      "offloads": [
+        "roster",
+        "offload"
+      ],
+      "runs": [
+        "roster",
+        "runs"
+      ]
+    },
+    "injuries": false
+  },
+  "sgo": {
+    "leagues": [],
+    "stat_map": {}
+  },
+  "odds_api": {
+    "sport_keys": [],
+    "markets": [],
+    "regions": "au",
+    "min_left": 30,
+    "hours_ahead": 36,
+    "stat_by_market": {}
+  },
+  "schedule": {
+    "morning": "00:00",
+    "board_open": "01:00",
+    "window": [
+      "00:00",
+      "23:59"
+    ],
+    "pp_every_min": 180,
+    "results_from": "06:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex Rugby League 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form",
+      "season base",
+      "opponent allowed",
+      "home / away split",
+      "PrizePicks standard line anchor"
+    ],
+    "pending": [
+      "carries",
+      "tackle counts",
+      "minutes",
+      "history (none on the Mac)",
+      "PrizePicks league id (NRL is off season; added when the board appears)"
+    ]
+  },
+  "team_alias": {}
+}

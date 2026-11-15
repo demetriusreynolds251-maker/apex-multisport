@@ -1,0 +1,393 @@
+{
+  "sport": "wnba",
+  "name": "WNBA",
+  "prefix": "wnba",
+  "emoji": "🏀",
+  "group": "basketball",
+  "season_start_month": 5,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": null,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "points": {
+      "label": "Points",
+      "formula": [
+        "points"
+      ],
+      "dist": "normal",
+      "sd_floor": 3,
+      "board": true
+    },
+    "rebounds": {
+      "label": "Rebounds",
+      "formula": [
+        "rebounds"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.6,
+      "board": true
+    },
+    "assists": {
+      "label": "Assists",
+      "formula": [
+        "assists"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.3,
+      "board": true
+    },
+    "pra": {
+      "label": "Pts+Rebs+Asts",
+      "formula": [
+        "points",
+        "rebounds",
+        "assists"
+      ],
+      "dist": "normal",
+      "sd_floor": 4,
+      "board": true,
+      "alt": "pra_raw"
+    },
+    "pr": {
+      "label": "Pts+Rebs",
+      "formula": [
+        "points",
+        "rebounds"
+      ],
+      "dist": "normal",
+      "sd_floor": 3.5,
+      "board": true,
+      "alt": "pr_raw"
+    },
+    "pa": {
+      "label": "Pts+Asts",
+      "formula": [
+        "points",
+        "assists"
+      ],
+      "dist": "normal",
+      "sd_floor": 3.3,
+      "board": true,
+      "alt": "pa_raw"
+    },
+    "ra": {
+      "label": "Rebs+Asts",
+      "formula": [
+        "rebounds",
+        "assists"
+      ],
+      "dist": "normal",
+      "sd_floor": 2,
+      "board": true,
+      "alt": "ra_raw"
+    },
+    "threes": {
+      "label": "3-PT Made",
+      "formula": [
+        "threes"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.7,
+      "board": false
+    },
+    "steals": {
+      "label": "Steals",
+      "formula": [
+        "steals"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "blocks": {
+      "label": "Blocked Shots",
+      "formula": [
+        "blocks"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "turnovers": {
+      "label": "Turnovers",
+      "formula": [
+        "turnovers"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": false
+    },
+    "fgm": {
+      "label": "FG Made",
+      "formula": [
+        "fgm"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.5,
+      "board": false
+    },
+    "ftm": {
+      "label": "Free Throws Made",
+      "formula": [
+        "ftm"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.8,
+      "board": false
+    },
+    "fantasy": {
+      "label": "Fantasy Score",
+      "formula": [
+        [
+          "points",
+          1
+        ],
+        [
+          "rebounds",
+          1.2
+        ],
+        [
+          "assists",
+          1.5
+        ],
+        [
+          "steals",
+          3
+        ],
+        [
+          "blocks",
+          3
+        ],
+        [
+          "turnovers",
+          -1
+        ]
+      ],
+      "dist": "normal",
+      "sd_floor": 5,
+      "board": false,
+      "alt": "fantasy_raw"
+    }
+  },
+  "stats_by_pp_name": {
+    "points": "points",
+    "rebounds": "rebounds",
+    "assists": "assists",
+    "pts+rebs+asts": "pra",
+    "pts+rebs": "pr",
+    "pts+asts": "pa",
+    "rebs+asts": "ra",
+    "3-pt made": "threes",
+    "steals": "steals",
+    "blocked shots": "blocks",
+    "turnovers": "turnovers",
+    "fg made": "fgm",
+    "free throws made": "ftm",
+    "fantasy score": "fantasy",
+    "pra": "pra",
+    "3ptm": "threes"
+  },
+  "prizepicks": {
+    "leagues": {
+      "3": "WNBA"
+    }
+  },
+  "espn": {
+    "paths": [
+      "basketball/wnba"
+    ],
+    "keys": {
+      "minutes": [
+        "*",
+        "minutes",
+        "minutes"
+      ],
+      "points": [
+        "*",
+        "points"
+      ],
+      "rebounds": [
+        "*",
+        "rebounds"
+      ],
+      "assists": [
+        "*",
+        "assists"
+      ],
+      "steals": [
+        "*",
+        "steals"
+      ],
+      "blocks": [
+        "*",
+        "blocks"
+      ],
+      "turnovers": [
+        "*",
+        "turnovers"
+      ],
+      "fgm": [
+        "*",
+        "fieldGoalsMade-fieldGoalsAttempted#1"
+      ],
+      "threes": [
+        "*",
+        "threePointFieldGoalsMade-threePointFieldGoalsAttempted#1"
+      ],
+      "ftm": [
+        "*",
+        "freeThrowsMade-freeThrowsAttempted#1"
+      ]
+    },
+    "injuries": true
+  },
+  "sgo": {
+    "leagues": [
+      "WNBA"
+    ],
+    "stat_map": {
+      "points": "points",
+      "rebounds": "rebounds",
+      "assists": "assists",
+      "points+rebounds+assists": "pra_raw",
+      "points+rebounds": "pr_raw",
+      "points+assists": "pa_raw",
+      "rebounds+assists": "ra_raw",
+      "threePointersMade": "threes",
+      "steals": "steals",
+      "blocks": "blocks",
+      "turnovers": "turnovers",
+      "fieldGoalsMade": "fgm",
+      "freeThrowsMade": "ftm",
+      "fantasyScore": "fantasy_raw",
+      "minutes": "minutes"
+    }
+  },
+  "odds_api": {
+    "sport_keys": [
+      "basketball_wnba"
+    ],
+    "markets": [
+      "player_points",
+      "player_rebounds",
+      "player_assists",
+      "player_points_rebounds_assists",
+      "player_points_rebounds",
+      "player_points_assists",
+      "player_rebounds_assists"
+    ],
+    "regions": "us",
+    "min_left": 30,
+    "hours_ahead": 30,
+    "stat_by_market": {
+      "player_points": "points",
+      "player_rebounds": "rebounds",
+      "player_assists": "assists",
+      "player_points_rebounds_assists": "pra",
+      "player_points_rebounds": "pr",
+      "player_points_assists": "pa",
+      "player_rebounds_assists": "ra"
+    }
+  },
+  "schedule": {
+    "morning": "08:00",
+    "board_open": "10:00",
+    "window": [
+      "08:00",
+      "23:30"
+    ],
+    "pp_every_min": 180,
+    "results_from": "20:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex WNBA 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form",
+      "season base",
+      "minutes trend",
+      "opponent allowed",
+      "home / away split",
+      "teammates out (ESPN injuries)",
+      "PrizePicks standard line anchor"
+    ],
+    "pending": [
+      "usage %",
+      "pace",
+      "defense vs position"
+    ]
+  },
+  "team_alias": {}
+}

@@ -1,0 +1,343 @@
+{
+  "sport": "soccer",
+  "name": "Soccer",
+  "prefix": "soccer",
+  "emoji": "⚽",
+  "group": "soccer",
+  "season_start_month": 7,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": null,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "shots": {
+      "label": "Shots",
+      "formula": [
+        "shots"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.8,
+      "board": true
+    },
+    "sot": {
+      "label": "Shots On Target",
+      "formula": [
+        "shots_on_target"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true
+    },
+    "goals": {
+      "label": "Goals",
+      "formula": [
+        "goals"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": true
+    },
+    "assists": {
+      "label": "Assists",
+      "formula": [
+        "assists"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": true
+    },
+    "goal_assist": {
+      "label": "Goal + Assist",
+      "formula": [
+        "goals",
+        "assists"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.4,
+      "board": true,
+      "alt": "ga_raw"
+    },
+    "saves": {
+      "label": "Goalie Saves",
+      "formula": [
+        "saves"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.5,
+      "board": true
+    },
+    "fouls": {
+      "label": "Fouls",
+      "formula": [
+        "fouls"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true
+    },
+    "tackles": {
+      "label": "Tackles",
+      "formula": [
+        "tackles_raw"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.7,
+      "board": false
+    },
+    "passes": {
+      "label": "Passes Attempted",
+      "formula": [
+        "passes_raw"
+      ],
+      "dist": "normal",
+      "sd_floor": 6,
+      "board": false
+    },
+    "fantasy": {
+      "label": "Fantasy Score",
+      "formula": [
+        "fantasy_raw"
+      ],
+      "dist": "normal",
+      "sd_floor": 3,
+      "board": false
+    }
+  },
+  "stats_by_pp_name": {
+    "shots": "shots",
+    "sot": "sot",
+    "shots on target": "sot",
+    "goals": "goals",
+    "assists": "assists",
+    "goal + assist": "goal_assist",
+    "goals + assists": "goal_assist",
+    "goal+assist": "goal_assist",
+    "goalie saves": "saves",
+    "saves": "saves",
+    "fouls": "fouls",
+    "tackles": "tackles",
+    "passes attempted": "passes",
+    "fantasy score": "fantasy"
+  },
+  "prizepicks": {
+    "leagues": {
+      "82": "SOCCER",
+      "14": "EPL"
+    }
+  },
+  "espn": {
+    "paths": [
+      "soccer/eng.1",
+      "soccer/esp.1",
+      "soccer/ger.1",
+      "soccer/ita.1",
+      "soccer/fra.1",
+      "soccer/usa.1",
+      "soccer/uefa.champions",
+      "soccer/uefa.europa",
+      "soccer/mex.1", "soccer/bra.1", "soccer/uefa.nations", "soccer/fifa.friendly", "soccer/fifa.worldq.uefa", "soccer/fifa.worldq.conmebol", "soccer/fifa.worldq.concacaf"
+    ],
+    "keys": {
+      "shots": [
+        "roster",
+        "totalShots"
+      ],
+      "shots_on_target": [
+        "roster",
+        "shotsOnTarget"
+      ],
+      "goals": [
+        "roster",
+        "totalGoals"
+      ],
+      "assists": [
+        "roster",
+        "goalAssists"
+      ],
+      "saves": [
+        "roster",
+        "saves"
+      ],
+      "fouls": [
+        "roster",
+        "foulsCommitted"
+      ],
+      "appearances": [
+        "roster",
+        "appearances"
+      ]
+    },
+    "injuries": false
+  },
+  "sgo": {
+    "leagues": [
+      "EPL",
+      "LA_LIGA",
+      "IT_SERIE_A",
+      "BUNDESLIGA",
+      "FR_LIGUE_1",
+      "MLS",
+      "UEFA_CHAMPIONS_LEAGUE",
+      "UEFA_EUROPA_LEAGUE",
+      "LIGA_MX",
+      "EREDIVISIE",
+      "BR_SERIE_A",
+      "INTERNATIONAL_SOCCER"
+    ],
+    "stat_map": {
+      "shots": "shots",
+      "shots_onGoal": "shots_on_target",
+      "points": "goals",
+      "goals": "goals",
+      "assists": "assists",
+      "goals+assists": "ga_raw",
+      "goalie_saves": "saves",
+      "fouls": "fouls",
+      "tackles": "tackles_raw",
+      "passes_attempted": "passes_raw",
+      "fantasyScore": "fantasy_raw"
+    }
+  },
+  "odds_api": {
+    "sport_keys": [
+      "soccer_epl",
+      "soccer_spain_la_liga",
+      "soccer_germany_bundesliga",
+      "soccer_italy_serie_a",
+      "soccer_france_ligue_one",
+      "soccer_usa_mls",
+      "soccer_uefa_champs_league"
+    ],
+    "markets": [
+      "player_shots",
+      "player_shots_on_target",
+      "player_goal_scorer_anytime"
+    ],
+    "regions": "us,uk",
+    "min_left": 30,
+    "hours_ahead": 36,
+    "stat_by_market": {
+      "player_shots": "shots",
+      "player_shots_on_target": "sot"
+    },
+    "source": "sgo",
+    "sgo_leagues": [
+      "EPL",
+      "LA_LIGA",
+      "BUNDESLIGA",
+      "IT_SERIE_A",
+      "FR_LIGUE_1",
+      "MLS",
+      "UEFA_CHAMPIONS_LEAGUE"
+    ],
+    "sgo_stat": {
+      "shots": "shots",
+      "shots_onGoal": "sot",
+      "points": "goals",
+      "assists": "assists",
+      "goals+assists": "goal_assist",
+      "goalie_saves": "saves"
+    }
+  },
+  "schedule": {
+    "morning": "05:30",
+    "board_open": "07:00",
+    "window": [
+      "05:30",
+      "23:30"
+    ],
+    "pp_every_min": 180,
+    "results_from": "13:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex Soccer 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form",
+      "season base",
+      "opponent allowed",
+      "home / away split",
+      "starter check (played most of the last 10)",
+      "PrizePicks standard line anchor"
+    ],
+    "pending": [
+      "expected goals (xG) / assists (xA)",
+      "possession",
+      "league strength",
+      "line-up confirmation"
+    ]
+  },
+  "team_alias": {},
+  "books_display_only": true
+}

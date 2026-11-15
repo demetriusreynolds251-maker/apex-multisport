@@ -1,0 +1,3 @@
+# Decisions (his words)
+
+APEX SPORTS EXPANSION (owner, 11/5/2026 3:22 PM CT): "Every sport must operate as a completely independent system with its own files, databases, collectors, schedulers, models, rules, grading, reports, Discord outputs, and historical data. DO NOT build a universal sports model. DO NOT share projections / databases / historical records / feature weights / training data between sports. The only thing shared across Apex Sports should be the operational workflow and architecture pattern." Discord: one bot per sport (decision card 3:32 PM CT); keys pasted through /bball-sportkey (his 3:37 PM CT ask).

@@ -1,0 +1,387 @@
+{
+  "sport": "mlb",
+  "name": "MLB",
+  "prefix": "mlb",
+  "emoji": "⚾",
+  "group": "baseball",
+  "season_start_month": 3,
+  "min_games": 6,
+  "recent_weight": 0.5,
+  "opp_weight": 0.5,
+  "opp_games": 12,
+  "market_weight": 0.5,
+  "b2b_factor": null,
+  "tiers": {
+    "A": 70,
+    "B": 65,
+    "C": 60
+  },
+  "rules": {
+    "floor": 70,
+    "min_games": 6,
+    "no_shaky_on_board": false
+  },
+  "boards": {
+    "top3": {
+      "title": "TOP 3",
+      "size": 3,
+      "note": "70+ (3-pick Power)",
+      "backups": 10
+    },
+    "elite5": {
+      "title": "ELITE 5",
+      "size": 5,
+      "note": "70+ (5-pick Flex)",
+      "backups": 10
+    },
+    "elite6": {
+      "title": "ELITE 6",
+      "size": 6,
+      "note": "70+ (6-pick Flex)",
+      "backups": 10
+    },
+    "top10": {
+      "title": "TOP 10",
+      "size": 10,
+      "note": "70+",
+      "backups": 10
+    },
+    "bestgoblin": {
+      "title": "BEST GOBLIN",
+      "size": 5,
+      "note": "MORE only, 70+",
+      "kind": "goblin",
+      "backups": 10
+    },
+    "beststandard": {
+      "title": "BEST STANDARD",
+      "size": 5,
+      "note": "65+",
+      "kind": "standard",
+      "floor": 65.0,
+      "backups": 10
+    },
+    "bestdemon": {
+      "title": "BEST DEMON",
+      "size": 5,
+      "note": "MORE only, 60+",
+      "kind": "demon",
+      "floor": 60.0,
+      "backups": 10
+    }
+  },
+  "stats": {
+    "hits": {
+      "label": "Hits",
+      "formula": [
+        "hits"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": true
+    },
+    "runs": {
+      "label": "Runs",
+      "formula": [
+        "runs"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true
+    },
+    "rbis": {
+      "label": "RBIs",
+      "formula": [
+        "rbis"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true
+    },
+    "home_runs": {
+      "label": "Home Runs",
+      "formula": [
+        "home_runs"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": true
+    },
+    "total_bases": {
+      "label": "Total Bases",
+      "formula": [
+        "total_bases_raw"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.8,
+      "board": false
+    },
+    "hits_runs_rbis": {
+      "label": "Hits+Runs+RBIs",
+      "formula": [
+        "hits",
+        "runs",
+        "rbis"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.9,
+      "board": true,
+      "alt": "hrr_raw"
+    },
+    "walks": {
+      "label": "Walks",
+      "formula": [
+        "walks"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.4,
+      "board": true
+    },
+    "stolen_bases": {
+      "label": "Stolen Bases",
+      "formula": [
+        "stolen_bases_raw"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": false
+    },
+    "singles": {
+      "label": "Singles",
+      "formula": [
+        "singles_raw"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": false
+    },
+    "doubles": {
+      "label": "Doubles",
+      "formula": [
+        "doubles_raw"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.3,
+      "board": false
+    },
+    "hitter_ks": {
+      "label": "Hitter Strikeouts",
+      "formula": [
+        "hitter_ks"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.5,
+      "board": true
+    },
+    "pitcher_ks": {
+      "label": "Pitcher Strikeouts",
+      "formula": [
+        "pitcher_ks"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.4,
+      "board": true
+    },
+    "pitching_outs": {
+      "label": "Pitching Outs",
+      "formula": [
+        "pitching_outs_raw"
+      ],
+      "dist": "normal",
+      "sd_floor": 2.5,
+      "board": false
+    },
+    "earned_runs": {
+      "label": "Earned Runs Allowed",
+      "formula": [
+        "earned_runs"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.8,
+      "board": true
+    },
+    "hits_allowed": {
+      "label": "Hits Allowed",
+      "formula": [
+        "hits_allowed"
+      ],
+      "dist": "normal",
+      "sd_floor": 1.3,
+      "board": true
+    },
+    "walks_allowed": {
+      "label": "Walks Allowed",
+      "formula": [
+        "walks_allowed"
+      ],
+      "dist": "poisson",
+      "sd_floor": 0.6,
+      "board": true
+    }
+  },
+  "stats_by_pp_name": {
+    "hits": "hits",
+    "runs": "runs",
+    "rbis": "rbis",
+    "home runs": "home_runs",
+    "total bases": "total_bases",
+    "hits+runs+rbis": "hits_runs_rbis",
+    "walks": "walks",
+    "stolen bases": "stolen_bases",
+    "singles": "singles",
+    "doubles": "doubles",
+    "hitter strikeouts": "hitter_ks",
+    "pitcher strikeouts": "pitcher_ks",
+    "pitching outs": "pitching_outs",
+    "earned runs allowed": "earned_runs",
+    "hits allowed": "hits_allowed",
+    "walks allowed": "walks_allowed"
+  },
+  "prizepicks": {
+    "leagues": {
+      "2": "MLB"
+    }
+  },
+  "espn": {
+    "paths": [
+      "baseball/mlb"
+    ],
+    "keys": {
+      "hits": [
+        "batting",
+        "hits"
+      ],
+      "runs": [
+        "batting",
+        "runs"
+      ],
+      "rbis": [
+        "batting",
+        "RBIs"
+      ],
+      "home_runs": [
+        "batting",
+        "homeRuns"
+      ],
+      "walks": [
+        "batting",
+        "walks"
+      ],
+      "hitter_ks": [
+        "batting",
+        "strikeouts"
+      ],
+      "pitcher_ks": [
+        "pitching",
+        "strikeouts"
+      ],
+      "earned_runs": [
+        "pitching",
+        "earnedRuns"
+      ],
+      "hits_allowed": [
+        "pitching",
+        "hits"
+      ],
+      "walks_allowed": [
+        "pitching",
+        "walks"
+      ]
+    },
+    "injuries": true
+  },
+  "sgo": {
+    "leagues": [
+      "MLB"
+    ],
+    "stat_map": {
+      "batting_hits": "hits",
+      "batting_RBI": "rbis",
+      "batting_homeRuns": "home_runs",
+      "batting_totalBases": "total_bases_raw",
+      "batting_hits+runs+rbi": "hrr_raw",
+      "batting_basesOnBalls": "walks",
+      "batting_stolenBases": "stolen_bases_raw",
+      "batting_singles": "singles_raw",
+      "batting_doubles": "doubles_raw",
+      "batting_strikeouts": "hitter_ks",
+      "batting_runs": "runs",
+      "pitching_strikeouts": "pitcher_ks",
+      "pitching_outs": "pitching_outs_raw",
+      "pitching_earnedRuns": "earned_runs",
+      "pitching_hits": "hits_allowed",
+      "pitching_basesOnBalls": "walks_allowed"
+    }
+  },
+  "odds_api": {
+    "sport_keys": [
+      "baseball_mlb"
+    ],
+    "markets": [
+      "batter_hits",
+      "batter_total_bases",
+      "batter_rbis",
+      "batter_runs_scored",
+      "batter_home_runs",
+      "batter_walks",
+      "pitcher_strikeouts",
+      "pitcher_outs",
+      "pitcher_earned_runs"
+    ],
+    "regions": "us",
+    "min_left": 30,
+    "hours_ahead": 30,
+    "stat_by_market": {
+      "batter_hits": "hits",
+      "batter_total_bases": "total_bases",
+      "batter_rbis": "rbis",
+      "batter_runs_scored": "runs",
+      "batter_home_runs": "home_runs",
+      "batter_walks": "walks",
+      "pitcher_strikeouts": "pitcher_ks",
+      "pitcher_outs": "pitching_outs",
+      "pitcher_earned_runs": "earned_runs"
+    }
+  },
+  "schedule": {
+    "morning": "08:00",
+    "board_open": "10:00",
+    "window": [
+      "08:00",
+      "23:30"
+    ],
+    "pp_every_min": 180,
+    "results_from": "20:00",
+    "grading": "04:00",
+    "report": "09:00",
+    "refit": "05:00",
+    "book_pulls": [
+      "12:45",
+      "16:05",
+      "18:35"
+    ]
+  },
+  "discord": {
+    "guild_id": 0,
+    "category": "Apex MLB 🧪"
+  },
+  "factors": {
+    "live": [
+      "recent form",
+      "season base",
+      "opponent team allowed",
+      "home / away split",
+      "park factor (static table)",
+      "injury list",
+      "PrizePicks standard line anchor"
+    ],
+    "pending": [
+      "opposing pitcher",
+      "bullpen strength",
+      "batting order",
+      "handedness splits",
+      "weather"
+    ]
+  },
+  "team_alias": {}
+}
