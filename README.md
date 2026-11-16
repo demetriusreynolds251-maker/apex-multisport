@@ -1,3 +1,6 @@
+<p align="center"><a href="https://demetriusreynolds251-maker.github.io/apex/"><img src="docs/preview.png" alt="Project Apex Intelligence™ Multisport banner" width="100%"></a></p>
+<p align="center"><a href="https://demetriusreynolds251-maker.github.io/apex/"><b>▶ Take the Apex Intelligence™ tour</b></a></p>
+
 # apex-multisport
 
 Apex for sports other than tennis. Each league has its own folder built from one template: collectors pull PrizePicks lines and sportsbook prices, a model prices each prop, a scheduler builds boards, a Discord bot posts them, and a grader settles them from official results. It shares no code, database or bot with `apex-tennis`.
