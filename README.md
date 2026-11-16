@@ -1,3 +1,5 @@
+> **Moved:** this code now lives in the combined Apex repo: **[github.com/demetriusreynolds251-maker/apex/tree/main/multisport](https://github.com/demetriusreynolds251-maker/apex/tree/main/multisport)**. This repo is archived (read-only).
+
 # apex-multisport
 
 Apex for sports other than tennis. Each league has its own folder built from one template: collectors pull PrizePicks lines and sportsbook prices, a model prices each prop, a scheduler builds boards, a Discord bot posts them, and a grader settles them from official results. It shares no code, database or bot with `apex-tennis`.
