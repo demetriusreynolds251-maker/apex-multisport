@@ -48,3 +48,7 @@ nohup soccer/discord/start.sh >/dev/null 2>&1 &   # runs the scheduler and the b
 ## Known gaps
 
 The SportsGameOdds price reader (`sgo_raw.py`) lives outside this repo, and `_shared/line_vault/vault.py` reads the tennis props database from `apex-tennis`. Both are optional; the boards still run without them.
+
+## License
+
+[Apex Share-Back License 1.0](LICENSE): free to use, study and build on. If you use it, you agree to share your findings and improvements back publicly and for free, give credit, and not sell it. See the [terms on the site](https://demetriusreynolds251-maker.github.io/apex/#share).
